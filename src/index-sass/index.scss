@@ -1,0 +1,49 @@
+.guess-container{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    &__title{
+        font-size: 2.25rem;
+        text-align: center;
+    }
+    .guess-me{
+        width: 350px;
+        height: 350px;
+        margin: 0 auto;
+        border-radius: 0.8rem;
+        .btn-group{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 100%;
+            margin-top: 5rem;
+            button{
+                padding: 1rem;
+                font-size: 1rem;
+                border-radius: 0.625rem;
+                letter-spacing: 1px;
+                border: none;
+
+            }
+        }
+        .wrong, .correct{
+            margin-top: 1rem;
+        }
+        .wrong{
+            font-weight: 700;
+            text-align: center;
+            color: #ff0000;
+            font-size: 1.5rem;
+        }
+        .correct{
+            font-weight: 700;
+            text-align: center;
+            color: #008000;
+            font-size: 1.5rem;
+        }
+    }
+}
