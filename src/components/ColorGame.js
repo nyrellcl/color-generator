@@ -51,7 +51,7 @@ function ColorGame() {
         <>
         <header>
               <nav>
-                  <Link to="/start"><button type='button' className="game-exit">Exit Game</button></Link>
+                  <Link to="/color-generator"><button type='button' className="game-exit">Exit Game</button></Link>
               </nav>
           </header>
       <main>
