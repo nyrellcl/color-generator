@@ -1,9 +1,85 @@
+/*@keyframes beat{
+    to{transform: scale(1.1)}
+}*/
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.start-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #88e0d0;
+}
+.start-container .question-mark {
+  -webkit-animation: spin 5s infinite linear;
+          animation: spin 5s infinite linear;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+.start-container__title {
+  font-size: 2.625rem;
+  font-weight: 700;
+  font-family: "Bungee", cursive;
+  -webkit-text-stroke: 0.1875rem #000000;
+  text-shadow: 0.3125rem 0.3125rem 0rem #000000;
+  text-transform: uppercase;
+  color: #c7eeff;
+  text-align: center;
+  margin: 2rem;
+}
+.start-container__content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.start-container__content button {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+  background: #7ac38f;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+}
+
 .guess-container {
   height: 100vh;
   width: auto;
   display: flex;
   align-items: center;
-  font-family: "Plus Jakarta Sans", sans-serif;
   flex-direction: column;
   justify-content: center;
 }
@@ -45,4 +121,18 @@
   text-align: center;
   color: #008000;
   font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .start-container__content button {
+    transition: all 250ms ease-in-out;
+  }
+  .start-container__content button:not([disabled]):hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #7ac38f;
+  }
+  .start-container__content button:active {
+    transform: translateY(5px);
+  }
 }/*# sourceMappingURL=index.css.map */

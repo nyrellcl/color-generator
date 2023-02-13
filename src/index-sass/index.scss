@@ -1,9 +1,99 @@
+@use "sass:math";
+
+@mixin hover{
+    &:not([disabled]):hover{
+        @content;
+    }
+}
+
+@function rem($number){
+    @if unitless($number){
+        $default-one-rem-in-pixel: 16;
+
+        @return math.div($number, $default-one-rem-in-pixel) * 1rem;
+    }
+
+    @error "This '#{number}' must not have a unit";
+}
+
+/*@keyframes beat{
+    to{transform: scale(1.1)}
+}*/
+
+@keyframes spin{
+    from{transform: rotate(0deg)};
+    to{transform: rotate(360deg)};
+}
+
+//colors
+$btn: #7ac38f;
+$start-bg: #88e0d0;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.start-container{
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  $start-bg;
+    .question-mark{
+        animation: spin 5s infinite linear;
+        width: rem(70);
+        height: rem(70);
+    }
+    &__title{
+        font-size: rem(42);
+        font-weight: 700;
+        font-family: 'Bungee', cursive;
+        -webkit-text-stroke: rem(3) #000000;
+        text-shadow: rem(5) rem(5) rem(0) #000000;
+        text-transform: uppercase;
+        color: #c7eeff;
+        text-align: center;
+        margin: 2rem;
+    }
+    &__content{
+        h2{
+            margin-bottom: 1rem;
+            font-size: rem(24);
+        }
+        button{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            padding: rem(14);
+            border-radius: rem(8);
+            background: #7ac38f;
+            border: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: rem(1);
+        }
+    }
+}
+
+
 .guess-container{
     height: 100vh;
     width: auto;
     display: flex;
     align-items: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
     flex-direction: column;
     justify-content: center;
     &__title{
@@ -44,6 +134,24 @@
             text-align: center;
             color: #008000;
             font-size: 1.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .start-container{
+        &__content{
+            button{
+                transition: all 250ms ease-in-out;
+                @include hover{
+                    cursor: pointer;
+                    background-color: #fff;
+                    color: $btn;
+                }
+                &:active{
+                    transform: translateY(5px);
+                }
+            }
         }
     }
 }

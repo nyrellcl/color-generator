@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/color-generator" exact element={<StartGame/>}/>
+        <Route path="/color-generator/" exact element={<StartGame/>}/>
         <Route path="/game" element={<ColorGame/>}/>
       </Routes>
     </>
