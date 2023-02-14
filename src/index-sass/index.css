@@ -27,8 +27,39 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+body {
+  min-width: 23.4375rem;
+}
+
 a {
   text-decoration: none;
+}
+
+.nav-bar {
+  position: relative;
+}
+
+.start-btn, .game-exit {
+  width: 7.5rem;
+  height: 2.8125rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+  background: #7ac38f;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.03125rem;
+}
+
+.game-exit {
+  position: absolute;
+  transform: translate(-50%, 100%);
+  top: 50%;
+  left: 50%;
 }
 
 .start-container {
@@ -60,20 +91,6 @@ a {
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
-.start-container__content button {
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  padding: 0.875rem;
-  border-radius: 0.5rem;
-  background: #7ac38f;
-  border: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.0625rem;
-}
 
 .guess-container {
   height: 100vh;
@@ -82,10 +99,12 @@ a {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background-color: #c7eeff;
 }
 .guess-container__title {
   font-size: 2.25rem;
   text-align: center;
+  margin: 2rem 0;
 }
 .guess-container .guess-me {
   width: 350px;
@@ -106,6 +125,9 @@ a {
   border-radius: 0.625rem;
   letter-spacing: 1px;
   border: none;
+  cursor: pointer;
+  background-color: #262727;
+  color: #fff;
 }
 .guess-container .guess-me .wrong, .guess-container .guess-me .correct {
   margin-top: 1rem;
@@ -124,15 +146,21 @@ a {
 }
 
 @media only screen and (min-width: 1200px) {
-  .start-container__content button {
+  .start-btn, .game-exit {
     transition: all 250ms ease-in-out;
   }
-  .start-container__content button:not([disabled]):hover {
+  .start-btn:not([disabled]):hover, .game-exit:not([disabled]):hover {
     cursor: pointer;
     background-color: #fff;
     color: #7ac38f;
+    border: 1px solid #7ac38f;
   }
-  .start-container__content button:active {
-    transform: translateY(5px);
+  .guess-container .btn-group button {
+    transition: all 250ms ease-in-out;
+  }
+  .guess-container .btn-group button:not([disabled]):hover {
+    background-color: #fff;
+    color: #262727;
+    border: 1px solid #262727;
   }
 }/*# sourceMappingURL=index.css.map */

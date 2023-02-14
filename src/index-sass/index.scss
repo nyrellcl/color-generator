@@ -28,6 +28,7 @@
 //colors
 $btn: #7ac38f;
 $start-bg: #88e0d0;
+$game-bg: #c7eeff;
 
 *{
     padding: 0;
@@ -39,9 +40,43 @@ $start-bg: #88e0d0;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+body{
+    min-width: rem(375);
+}
+
 a{
     text-decoration: none;
 }
+
+.nav-bar{
+    position: relative;
+}
+
+.start-btn{
+    width: rem(120);
+    height: rem(45);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: rem(14);
+    border-radius: rem(8);
+    background: #7ac38f;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: rem(0.5);
+}
+
+.game-exit{
+    position: absolute;
+    @extend .start-btn;
+    transform: translate(-50%, 100%);
+    top: 50%;
+    left: 50%;
+}
+
+
 
 .start-container{
     height: 100vh;
@@ -71,20 +106,6 @@ a{
             margin-bottom: 1rem;
             font-size: rem(24);
         }
-        button{
-            width: 50%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            padding: rem(14);
-            border-radius: rem(8);
-            background: #7ac38f;
-            border: none;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: rem(1);
-        }
     }
 }
 
@@ -96,9 +117,11 @@ a{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    background-color: $game-bg;
     &__title{
         font-size: 2.25rem;
         text-align: center;
+        margin: 2rem 0;
     }
     .guess-me{
         width: 350px;
@@ -117,6 +140,9 @@ a{
                 border-radius: 0.625rem;
                 letter-spacing: 1px;
                 border: none;
+                cursor: pointer;
+                background-color: #262727;
+                color: #fff;
 
             }
         }
@@ -139,17 +165,24 @@ a{
 }
 
 @media only screen and (min-width: 1200px){
-    .start-container{
-        &__content{
+    .start-btn{
+        transition: all 250ms ease-in-out;
+        @include hover{
+            cursor: pointer;
+            background-color: #fff;
+            color: $btn;
+            border: 1px solid $btn;
+        }
+    }
+
+    .guess-container{
+        .btn-group{
             button{
                 transition: all 250ms ease-in-out;
                 @include hover{
-                    cursor: pointer;
                     background-color: #fff;
-                    color: $btn;
-                }
-                &:active{
-                    transform: translateY(5px);
+                    color: #262727;
+                    border: 1px solid #262727;
                 }
             }
         }

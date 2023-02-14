@@ -9,7 +9,7 @@ function StartGame() {
             <h1 className='start-container__title'>Let's Guess the Color!</h1>
             <article className="start-container__content">
                 <h2>Press button to start</h2>
-                <Link to="/game"><button type="button">Let's Play!</button></Link>
+                <Link to="/game"><button type="button" className='start-btn'>Let's Play!</button></Link>
 
             </article>
         </section>
