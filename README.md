@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Color Generator Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
 
-## Available Scripts
+Welcome! This projected was created using ReactJS and SCSS/SASS for custom CSS styling. The goal of this project was to further familiarize myself with using React for my projects. I followed a tutorial from Web Dev Cody on Youtube to supplement the completion of this project. I wanted to gain in-depth understanding of using react hooks, such as useState() and useEffect(). I also wanted more practice on creating complex logic to create complex projects projects. This random color generator game was a good project to create as it touched on a lot of areas where a junior level developer should be. 
 
-In the project directory, you can run:
+# Expanding the project
 
-### `npm start`
+To build on the tutorial, I didn't want to just stop at where the tutorial ended. I realized that tutorials are great foundations in practicing scalability, and refining and expanding on solutions. For this project, I made it feel more like an actual game, instead of just a single pager that loads up and tells the user to guess the color. On top of the tutorial I added:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- a "Start Page" with my own design and styling
+- Buttons on both the "Start Page" and "Game Page" to navigate between the components, so the user can go back and forth to the Start and Game pages
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Future Additions
 
-### `npm test`
+To further this project and the skills I gained finishing this project, I wanted to make this application to where it has one more game. Basically, a game of colors! Where the user can pick between guessing a color and playing a whole different game with different concepts and mechanics, all involving generating random colors. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Next Game
 
-### `npm run build`
+The additional game I spoke about will be called "Color Game". It's more of a betting game, but using colors! Simply put, 
+- the user will have a 3 x 2 array or board, which will have 6 colors already picked out
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- on the outside of the board, there will be 3 blocks or 3 elements of an array, each element will generate a random color when the user clicks a button and generates it
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- However, the 3 blocks will each generate a random color relative to the colors on the game board. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- The user will be able to place bets on the board, on which color they think will show up on the 3 blocks, before generating a random color
 
-### `npm run eject`
+- If the randomly generated colors match a bet on the board game, the players earnings will double, if the 3 blocks have 2 of the same colors, and the user matches that color, then their earnings will triple. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- There will be a "Clear Board" btn where all bets and colors are reset
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
