@@ -1,5 +1,7 @@
 # Color Generator Game
 
+![](./public/color-generator.png)
+
 # Overview
 
 Welcome! This projected was created using ReactJS and SCSS/SASS for custom CSS styling. The goal of this project was to further familiarize myself with using React for my projects. I followed a tutorial from Web Dev Cody on Youtube to supplement the completion of this project. I wanted to gain in-depth understanding of using react hooks, such as useState() and useEffect(). I also wanted more practice on creating complex logic to create complex projects projects. This random color generator game was a good project to create as it touched on a lot of areas where a junior level developer should be. 
