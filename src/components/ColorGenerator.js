@@ -14,7 +14,7 @@ const getRandomColor = () => {
     return `#${color}`
 }
 
-function ColorGame() {
+function ColorGenerator() {
 
     const [color, setColor] = useState('')
     const [answers, setAnswers] = useState([''])
@@ -76,4 +76,4 @@ function ColorGame() {
     )
 }
 
-export default ColorGame
+export default ColorGenerator
