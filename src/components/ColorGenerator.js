@@ -51,7 +51,7 @@ function ColorGenerator() {
         <>
         <header>
               <nav className='nav-bar'>
-                  <Link to="/color-generator"><button type='button' className="game-exit">Exit Game</button></Link>
+                  <Link to="/color-generator-start"><button type='button' className="game-exit">Exit Game</button></Link>
               </nav>
           </header>
       <main>
